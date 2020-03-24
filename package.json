@@ -1,0 +1,43 @@
+{
+  "name": "@balmanth/differs",
+  "description": "A raw diff algorithm that can be extended for many purposes involving mapping changes.",
+  "version": "0.0.0-alpha",
+  "type": "commonjs",
+  "main": "release/module.js",
+  "types": "types/module.d.ts",
+  "keywords": [
+    "diff algorithm"
+  ],
+  "author": {
+    "name": "Silas B. Domingos",
+    "email": "hello@balmante.eti.br",
+    "url": "https://balmante.eti.br"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balmanth/differs.git"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "@balmanth/objects": "github:balmanth/objects"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.2",
+    "typescript": "^3.8.3"
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "trailingComma": "none",
+    "printWidth": 120,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "semi": true
+  },
+  "scripts": {
+    "build": "npm run clean && npm run make",
+    "clean": "rm -rf ./release && rm -rf ./types/*.d.ts",
+    "make": "npx tsc -p ./source"
+  }
+}
